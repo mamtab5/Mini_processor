@@ -1,0 +1,20 @@
+module tb();
+
+reg clk;
+//reg [7:0] spc;
+merged uut (clk);
+initial
+begin
+    clk = 0;
+    forever #5 clk = ~clk;
+end
+
+initial
+begin
+
+//spc = 8'b0000_0000; 
+#150;
+
+$finish();
+end
+endmodule
